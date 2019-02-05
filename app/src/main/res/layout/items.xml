@@ -1,0 +1,46 @@
+<ScrollView android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:text="titulo"
+            android:textAlignment="center"
+            android:textSize="50dp" />
+
+        <TextView
+            android:layout_below="@id/titulo"
+            android:id="@+id/descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="TextViewadfasdfshadfkjg j gdjfgasjdf jsdgfjshdf jsgdfjsdjfgj asdkjfsahdfk "
+            android:textSize="30dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imagen"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/descripcion"
+            android:background="@drawable/ic_asadas_24dp" />
+
+    </RelativeLayout>
+</ScrollView>

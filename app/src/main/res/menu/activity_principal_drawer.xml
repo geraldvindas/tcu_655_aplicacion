@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mapa"
+            android:icon="@drawable/ic_zona_24dp"
+            android:title="Mapas" />
+        <item
+            android:id="@+id/nav_glosario"
+            android:icon="@drawable/ic_glosario_24dp"
+            android:title="Conceptos clave" />
+        <item
+        android:id="@+id/nav_curiosos"
+        android:icon="@drawable/llave_24dp"
+        android:title="Datos curiosos" />
+        <item
+            android:id="@+id/nav_asadas"
+            android:icon="@drawable/ic_asadas_24dp"
+            android:title="ASADAS" />
+        <item
+                android:id="@+id/nav_leyes"
+                android:icon="@drawable/ic_leyes_24dp"
+                android:title="Leyes" />
+
+        <item
+            android:id="@+id/nav_zona"
+            android:icon="@drawable/ic_zona_24dp"
+            android:title="Zonificación" />
+        <item
+            android:id="@+id/nav_contactos"
+            android:icon="@drawable/ic_contactos_24dp"
+            android:title="Contactos" />
+    </group>
+
+    <item android:title="Recurso en línea">
+        <menu>
+            <item
+                android:id="@+id/pdf1"
+                android:icon="@drawable/ic_pdf_24dp"
+                android:title="Diagnóstico de la subcuenca del rio coto" />
+            <item
+                android:id="@+id/pdf2"
+                android:icon="@drawable/ic_pdf_24dp"
+                android:title="Plan de manejo de la subcuenca del rio coto" />
+            <item
+                android:id="@+id/facebook"
+                android:icon="@drawable/face"
+                android:title="Facebook" />
+        </menu>
+    </item>
+
+</menu>

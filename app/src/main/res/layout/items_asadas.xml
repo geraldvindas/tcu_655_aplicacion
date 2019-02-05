@@ -1,0 +1,84 @@
+<ScrollView android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:text="titulo"
+            android:textAlignment="center"
+            android:textSize="50dp" />
+
+        <TextView
+            android:layout_below="@id/titulo"
+            android:id="@+id/canton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="textStart"
+            android:text="Cantón: "
+            android:textSize="20dp" />
+        <TextView
+            android:layout_below="@id/canton"
+            android:id="@+id/cantC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="textStart"
+            android:text="Número de comunidades que abastece: "
+            android:textSize="20dp" />
+        <TextView
+            android:layout_below="@id/cantC"
+            android:id="@+id/cantP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="textStart"
+            android:text="Población abastecida: "
+            android:textSize="20dp" />
+        <TextView
+            android:layout_below="@id/cantP"
+            android:id="@+id/fundacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="textStart"
+            android:text="Fundación: "
+            android:textSize="20dp" />
+        <TextView
+            android:layout_below="@id/fundacion"
+            android:id="@+id/condicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="textStart"
+            android:text="Condición: "
+            android:textSize="20dp" />
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
