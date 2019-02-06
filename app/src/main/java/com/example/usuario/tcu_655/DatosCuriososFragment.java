@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.List;
+
 import java.util.Random;
 
 public class DatosCuriososFragment extends Fragment {
@@ -30,10 +30,10 @@ public class DatosCuriososFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.datos_curiosos_fragment, container, false);
-        mText = (TextView) view.findViewById(R.id.texto);
+        mText = view.findViewById(R.id.texto);
         next();
 
-        Button button  = (Button) view.findViewById(R.id.button10);
+        Button button  = view.findViewById(R.id.button10);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 next();

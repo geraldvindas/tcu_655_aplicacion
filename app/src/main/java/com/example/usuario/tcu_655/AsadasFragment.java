@@ -3,11 +3,9 @@ package com.example.usuario.tcu_655;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.List;
 
@@ -18,10 +16,10 @@ import com.example.usuario.tcu_655.BaseDeDatos.DataBaseAccess;
 public class AsadasFragment extends Fragment {
 
     public static ConceptosFragment me = null;
-    static AsadasArrayAdapter asadaAdapter;
-    ListView mListView = null;
-    static List<Asadas> mAsadas;
-    Activity mParentActivity;
+    private static AsadasArrayAdapter asadaAdapter;
+    private ListView mListView = null;
+    private static List<Asadas> mAsadas;
+    private Activity mParentActivity;
 
 
     @Override
@@ -39,8 +37,8 @@ public class AsadasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.list_fragment, container, false);;
-        mListView = (ListView) view.findViewById(R.id.lista_datos);
+        View view = inflater.inflate(R.layout.list_fragment, container, false);
+        mListView = view.findViewById(R.id.lista_datos);
         mListView.setAdapter(asadaAdapter);
         return view;
     }

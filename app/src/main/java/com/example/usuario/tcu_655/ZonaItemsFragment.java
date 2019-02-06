@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,13 +25,16 @@ public class ZonaItemsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.items, container, false);;
+        View view = inflater.inflate(R.layout.items, container, false);
         Bundle args = getArguments();
+
+        assert args != null;
         String nombre = args.getString("titu");
         String com = args.getString("com");
         String uso = args.getString("uso");
-        TextView t = (TextView) view.findViewById(R.id.titulo);
-        TextView d = (TextView) view.findViewById(R.id.descripcion);
+
+        TextView t = view.findViewById(R.id.titulo);
+        TextView d = view.findViewById(R.id.descripcion);
         t.setText(nombre);
         String s = "";
         if(com!= (null)) s = "Comunidades: "+ com;

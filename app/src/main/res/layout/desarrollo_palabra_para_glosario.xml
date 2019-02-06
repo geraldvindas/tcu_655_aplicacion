@@ -17,7 +17,7 @@
         android:layout_marginTop="7dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@Palabra1"
+        android:text="Palabra1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,10 +34,12 @@
         android:inputType="textMultiLine"
         android:selectAllOnFocus="false"
         android:singleLine="false"
-        android:text="@TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto"
+        android:text="@string/texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="53dp" />
+        tools:layout_editor_absoluteY="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <Button
         android:id="@+id/button11"

@@ -24,9 +24,12 @@ public class ZonaArrayAdapter extends ArrayAdapter<Zona> {
 
         Context context = getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        assert inflater != null;
         View v = inflater.inflate(R.layout.concepto_item_list, null);
+
         Zona dato = lista.get(position);
-        TextView nombre = (TextView) v.findViewById(R.id.nombre);
+        TextView nombre = v.findViewById(R.id.nombre);
         nombre.setText(dato.getZona());
         return v;
 

@@ -28,15 +28,21 @@ public class TomasItemFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.items, container, false);
         Bundle args = getArguments();
+
+        assert args != null;
         String nombre = /*args.getString("nom") + " " +*/ args.getString("toma");
+
         String descripcion = args.getString("desc");
-        TextView t = (TextView) view.findViewById(R.id.titulo);
-        TextView d = (TextView) view.findViewById(R.id.descripcion);
+        TextView t = view.findViewById(R.id.titulo);
+        TextView d = view.findViewById(R.id.descripcion);
         t.setText(nombre);
         d.setText(descripcion);
         String imagen = args.getString("img");
-        ImageView i = (ImageView) view.findViewById(R.id.imagen);
+        ImageView i = view.findViewById(R.id.imagen);
+
+        assert imagen != null;
         String img = imagen.toLowerCase().substring(0, imagen.length() - 4);
+
         int id = getContext().getResources().getIdentifier(img,"drawable", getContext().getPackageName());
         i.setImageResource(id);
         return view;

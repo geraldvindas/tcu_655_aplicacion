@@ -20,10 +20,10 @@ import com.example.usuario.tcu_655.BaseDeDatos.DataBaseAccess;
 public class ConceptosFragment extends Fragment {
 
     public static ConceptosFragment me = null;
-    static ConceptosArrayAdapter conceptAdapter;
-    ListView mListView = null;
-    static List<Conceptos> mConceptos;
-    Activity mParentActivity;
+    private static ConceptosArrayAdapter conceptAdapter;
+    private ListView mListView = null;
+    private static List<Conceptos> mConceptos;
+    private Activity mParentActivity;
 
 
     @Override
@@ -41,8 +41,8 @@ public class ConceptosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.list_fragment, container, false);;
-        mListView = (ListView) view.findViewById(R.id.lista_datos);
+        View view = inflater.inflate(R.layout.list_fragment, container, false);
+        mListView = view.findViewById(R.id.lista_datos);
         mListView.setAdapter(conceptAdapter);
         mListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener()
@@ -60,7 +60,10 @@ public class ConceptosFragment extends Fragment {
                         arg.putString("img", c.getImagen());
                         ConceptosItemsFragment fragment = new ConceptosItemsFragment();
                         fragment.setArguments(arg);
+
+                        assert getFragmentManager() != null;
                         FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
                         transaction.replace(R.id.mainF, fragment, "tag1");
                         transaction.addToBackStack(null);
                         transaction.commit();

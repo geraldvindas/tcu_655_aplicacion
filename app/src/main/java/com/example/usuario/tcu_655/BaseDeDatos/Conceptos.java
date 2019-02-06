@@ -2,12 +2,12 @@ package com.example.usuario.tcu_655.BaseDeDatos;
 
 
 public class Conceptos implements Comparable<Conceptos>{
-    String nombre;
-    String texto;
-    String imagen;
-    String fuente;
-    int prioridad;
-    String etiqueta;
+    private String nombre;
+    private String texto;
+    private String imagen;
+    private String fuente;
+    private int prioridad;
+    private String etiqueta;
 
 
 
@@ -71,8 +71,7 @@ public class Conceptos implements Comparable<Conceptos>{
 
     @Override
     public int compareTo(Conceptos o) {
-        int comp = this.getPrioridad() - o.getPrioridad();
-        return comp;
+        return this.getPrioridad() - o.getPrioridad();
 
     }
 

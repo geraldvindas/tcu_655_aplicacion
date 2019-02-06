@@ -2,14 +2,14 @@ package com.example.usuario.tcu_655.BaseDeDatos;
 
 public class Asadas {
 
-    String nombre;
-    String canton;
-    int numeroComunidadesAbastece;
-    String comunidadesAbastece;
-    int poblacionAbastecidas;
-    int añoConstruccion;
-    String condicion;
-    TomasDeAgua toma;
+    private String nombre;
+    private String canton;
+    private int numeroComunidadesAbastece;
+    private String comunidadesAbastece;
+    private int poblacionAbastecidas;
+    private int añoConstruccion;
+    private String condicion;
+    private TomasDeAgua toma;
 
     public Asadas(String nombre, String canton, int numeroComunidadesAbastece, String comunidadesAbastece, int poblacionAbastecidas, int añoConstruccion, String condicion){
         this.nombre = nombre;
@@ -68,7 +68,7 @@ public class Asadas {
     }
 
     public void setAñoConstrucción(int añoConstrucción) {
-        añoConstrucción = añoConstrucción;
+        this.añoConstruccion = añoConstrucción;
     }
 
     public String getCondicion() {

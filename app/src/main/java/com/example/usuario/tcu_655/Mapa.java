@@ -34,11 +34,6 @@ public class Mapa extends Fragment {
     private MapView map;    // Mapa de la aplicación
     private double lat = 0.0, lon = 0.0;    // Latitud y longitud del usuario
 
-    //Docu para marker y poligonos
-    //https://github.com/osmdroid/osmdroid/wiki/Markers,-Lines-and-Polygons
-    private ArrayList<OverlayItem> lugares;
-
-
 
     //N.I.
     /**
@@ -89,7 +84,9 @@ public class Mapa extends Fragment {
     }
 
     private void setLugares(){
-        lugares = new ArrayList<OverlayItem>();
+        //Docu para marker y poligonos
+        //https://github.com/osmdroid/osmdroid/wiki/Markers,-Lines-and-Polygons
+        ArrayList<OverlayItem> lugares = new ArrayList<OverlayItem>();
         //Meter en loop cuando allan coordenadas.
         lugares.add(new OverlayItem("Title", "Description", new GeoPoint(9.029868, -83.050470))); // Lat/Lon decimal degrees
 

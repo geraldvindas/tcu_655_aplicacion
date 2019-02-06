@@ -3,10 +3,8 @@ package com.example.usuario.tcu_655;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -36,7 +34,7 @@ public class Principal extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -48,22 +46,22 @@ public class Principal extends AppCompatActivity
             }
         });*/
         ID = R.id.nav_mapa;
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        mFragment = (RelativeLayout) findViewById(R.id.mainF);
-        mMenu = (RelativeLayout) findViewById(R.id.menu);
-        FrameLayout mapa = (FrameLayout) findViewById(R.id.mapa);
-        FrameLayout conceptos = (FrameLayout) findViewById(R.id.conceptos);
-        FrameLayout asadas  = (FrameLayout) findViewById(R.id.asadas);
-        FrameLayout zonificacion = (FrameLayout) findViewById(R.id.zonificacion);
-        FrameLayout datos = (FrameLayout) findViewById(R.id.datos);
-        FrameLayout leyes = (FrameLayout) findViewById(R.id.leyes);
+        mFragment = findViewById(R.id.mainF);
+        mMenu = findViewById(R.id.menu);
+        FrameLayout mapa = findViewById(R.id.mapa);
+        FrameLayout conceptos = findViewById(R.id.conceptos);
+        FrameLayout asadas  = findViewById(R.id.asadas);
+        FrameLayout zonificacion = findViewById(R.id.zonificacion);
+        FrameLayout datos = findViewById(R.id.datos);
+        FrameLayout leyes = findViewById(R.id.leyes);
         mapa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 fragmentManager(R.id.nav_mapa);
@@ -104,7 +102,7 @@ public class Principal extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -152,7 +150,7 @@ public class Principal extends AppCompatActivity
         else {
             fragmentManager(id);
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

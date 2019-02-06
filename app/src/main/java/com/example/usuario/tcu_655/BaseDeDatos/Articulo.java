@@ -3,8 +3,8 @@ package com.example.usuario.tcu_655.BaseDeDatos;
 import android.support.annotation.NonNull;
 
 public class Articulo implements Comparable<Articulo> {
-    String articulo;
-    String descripcion;
+    private String articulo;
+    private String descripcion;
 
     public Articulo(String articulo, String descripcion){
         this.articulo = articulo;

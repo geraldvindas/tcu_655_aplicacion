@@ -6,14 +6,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class AsadasItemsFragment extends Fragment {
     public static AsadasFragment me = null;
     ListView mListView = null;
-    Activity mParentActivity;
+    private Activity mParentActivity;
 
 
     @Override
@@ -26,20 +25,23 @@ public class AsadasItemsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.items_asadas, container, false);;
+        View view = inflater.inflate(R.layout.items_asadas, container, false);
         Bundle args = getArguments();
+
+        assert args != null;
         String nombre = args.getString("titu");
         String canton = args.getString("can");
         int cantC = args.getInt("cC");
         int cantP = args.getInt("cP");
         int fundacion = args.getInt("fund");
         String condicion = args.getString("cond");
-        TextView t = (TextView) view.findViewById(R.id.titulo);
-        TextView d = (TextView) view.findViewById(R.id.canton);
-        TextView e = (TextView) view.findViewById(R.id.cantC);
-        TextView f = (TextView) view.findViewById(R.id.cantP);
-        TextView g = (TextView) view.findViewById(R.id.fundacion);
-        TextView h = (TextView) view.findViewById(R.id.condicion);
+
+        TextView t = view.findViewById(R.id.titulo);
+        TextView d = view.findViewById(R.id.canton);
+        TextView e = view.findViewById(R.id.cantC);
+        TextView f = view.findViewById(R.id.cantP);
+        TextView g = view.findViewById(R.id.fundacion);
+        TextView h = view.findViewById(R.id.condicion);
         t.setText(nombre);
         if(canton != (null)) d.setText("Cantón: "+canton);
         if(cantC!= (0)) e.setText("Número de comunidades que abastece: : "+cantC);

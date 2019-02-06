@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -30,14 +31,15 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="54dp">
+        tools:layout_editor_absoluteY="54dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra1"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -45,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 2"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -53,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 3"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -61,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 4"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -69,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 5"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -77,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 6"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -85,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 7"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -93,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 8"
+            android:text="@string/palabra"
             android:visibility="visible" />
 
         <Button
@@ -101,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="@Palabra 9"
+            android:text="@string/palabra"
             android:visibility="visible" />
     </LinearLayout>
 

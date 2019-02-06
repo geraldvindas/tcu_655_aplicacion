@@ -30,16 +30,19 @@ public class LeyesArrayAdapter extends ArrayAdapter<Leyes> {
     public View getView(int position, View convertView, ViewGroup parent) {
         Context context = getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        assert inflater != null;
         View v = inflater.inflate(R.layout.leyes_item_list, null);
+
         Leyes ley = lista.get(position);
-        TextView nombre = (TextView) v.findViewById(R.id.nombre);
+        TextView nombre = v.findViewById(R.id.nombre);
         nombre.setText(ley.getNombre());
         List<Articulo> articulos = ley.getArticulos();
-        LinearLayout sublista = (LinearLayout)v.findViewById(R.id.sub_lista);
+        LinearLayout sublista = v.findViewById(R.id.sub_lista);
         for (int i=0; i<articulos.size(); i++) {
             Articulo ar = articulos.get(i);
             View vi = inflater.inflate(R.layout.concepto_item_list, null);
-            TextView text = (TextView) vi.findViewById(R.id.nombre);
+            TextView text = vi.findViewById(R.id.nombre);
             text.setText(ar.getArticulo());
             sublista.addView(vi);
             vi.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +60,7 @@ public class LeyesArrayAdapter extends ArrayAdapter<Leyes> {
                 }
             });
         }
-        ImageButton button = (ImageButton) v.findViewById(R.id.button);
+        ImageButton button = v.findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

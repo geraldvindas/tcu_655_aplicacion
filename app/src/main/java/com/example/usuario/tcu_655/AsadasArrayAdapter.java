@@ -15,8 +15,8 @@ import java.util.List;
 
 public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
 
-    List<Asadas> lista;
-    FragmentManager manager;
+    private List<Asadas> lista;
+    private FragmentManager manager;
 
     public AsadasArrayAdapter(Context context, int textViewResourceId, List<Asadas> objects, FragmentManager manager) {
         super(context, textViewResourceId, objects);
@@ -29,9 +29,12 @@ public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
 
         Context context = getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        assert inflater != null;
         View v = inflater.inflate(R.layout.asadas_item_list, null);
+
         Asadas dato = lista.get(position);
-        TextView nombre = (TextView) v.findViewById(R.id.nombre);
+        TextView nombre = v.findViewById(R.id.nombre);
         nombre.setText(dato.getNombre());
         nombre.setOnClickListener(new View.OnClickListener() {
 
@@ -56,9 +59,9 @@ public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
         );
         TomasDeAgua toma = dato.getToma();
         if(toma != null) {
-            LinearLayout sublista = (LinearLayout) v.findViewById(R.id.sub_lista);
+            LinearLayout sublista = v.findViewById(R.id.sub_lista);
             View vi = inflater.inflate(R.layout.concepto_item_list, null);
-            TextView text = (TextView) vi.findViewById(R.id.nombre);
+            TextView text = vi.findViewById(R.id.nombre);
             text.setText("Toma de agua 1");
             sublista.addView(vi);
             vi.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +81,7 @@ public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
             });
 
             View vi2 = inflater.inflate(R.layout.concepto_item_list, null);
-            TextView text2 = (TextView) vi2.findViewById(R.id.nombre);
+            TextView text2 = vi2.findViewById(R.id.nombre);
             text2.setText("Toma de agua 2");
             sublista.addView(vi2);
             vi2.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +100,7 @@ public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
                 }
             });
 
-            ImageButton button = (ImageButton) v.findViewById(R.id.button);
+            ImageButton button = v.findViewById(R.id.button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

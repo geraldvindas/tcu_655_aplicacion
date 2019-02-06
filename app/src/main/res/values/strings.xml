@@ -13,4 +13,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_contenido_asada">ContenidoAsada</string>
     <string name="title_activity_asadas_items_fragment">AsadasItemsFragment</string>
+    <string name="palabra">Palabra</string>
+    <string name="texto">Texto</string>
 </resources>

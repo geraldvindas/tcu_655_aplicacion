@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import com.example.usuario.tcu_655.dummy.DummyContent;
 import com.example.usuario.tcu_655.dummy.DummyContent.DummyItem;
 
-import java.util.List;
+
 
 /**
  * A fragment representing a list of Items.
