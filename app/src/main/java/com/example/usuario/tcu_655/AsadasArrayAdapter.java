@@ -90,7 +90,7 @@ public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
                     Bundle arg = new Bundle();
                     arg.putString("toma", "Toma 2");
                     arg.putString("desc", toma.getDescripcion2());
-                    arg.putString("imagen", toma.getImagen2());
+                    arg.putString("img", toma.getImagen2());
                     TomasItemFragment fragment = new TomasItemFragment();
                     fragment.setArguments(arg);
                     FragmentTransaction transaction = manager.beginTransaction();

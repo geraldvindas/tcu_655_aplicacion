@@ -40,11 +40,12 @@ public class TomasItemFragment extends Fragment {
         String imagen = args.getString("img");
         ImageView i = view.findViewById(R.id.imagen);
 
-        assert imagen != null;
-        String img = imagen.toLowerCase().substring(0, imagen.length() - 4);
+        //assert imagen != null;
+         String img = imagen.toLowerCase().substring(0, imagen.length() - 4);
 
-        int id = getContext().getResources().getIdentifier(img,"drawable", getContext().getPackageName());
-        i.setImageResource(id);
+         int id = getContext().getResources().getIdentifier(img, "drawable", getContext().getPackageName());
+         i.setImageResource(id);
+
         return view;
     }
 }
