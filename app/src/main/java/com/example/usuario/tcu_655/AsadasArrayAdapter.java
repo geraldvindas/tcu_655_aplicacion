@@ -62,13 +62,13 @@ public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
             LinearLayout sublista = v.findViewById(R.id.sub_lista);
             View vi = inflater.inflate(R.layout.concepto_item_list, null);
             TextView text = vi.findViewById(R.id.nombre);
-            text.setText("Toma de agua 1");
+            text.setText("Muestreo de agua 1");
             sublista.addView(vi);
             vi.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Bundle arg = new Bundle();
-                    arg.putString("toma", "Toma 1");
+                    arg.putString("muestreo", "Muestreo 1");
                     arg.putString("desc", toma.getDescripcion1());
                     arg.putString("img", toma.getImagen1());
                     TomasItemFragment fragment = new TomasItemFragment();
@@ -82,13 +82,13 @@ public class AsadasArrayAdapter extends ArrayAdapter<Asadas> {
 
             View vi2 = inflater.inflate(R.layout.concepto_item_list, null);
             TextView text2 = vi2.findViewById(R.id.nombre);
-            text2.setText("Toma de agua 2");
+            text2.setText("Muestreo de agua 2");
             sublista.addView(vi2);
             vi2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Bundle arg = new Bundle();
-                    arg.putString("toma", "Toma 2");
+                    arg.putString("muestreo", "Muestreo 2");
                     arg.putString("desc", toma.getDescripcion2());
                     arg.putString("img", toma.getImagen2());
                     TomasItemFragment fragment = new TomasItemFragment();

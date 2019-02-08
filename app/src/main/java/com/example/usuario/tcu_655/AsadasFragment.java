@@ -30,7 +30,7 @@ public class AsadasFragment extends Fragment {
         databaseAccess.open();
         mAsadas = databaseAccess.getAsadas();
         databaseAccess.close();
-        asadaAdapter = new AsadasArrayAdapter(mParentActivity, R.layout.concepto_item_list, mAsadas, getFragmentManager());
+        asadaAdapter = new AsadasArrayAdapter(mParentActivity, R.layout.asadas_item_list, mAsadas, getFragmentManager());
     }
 
     @Override

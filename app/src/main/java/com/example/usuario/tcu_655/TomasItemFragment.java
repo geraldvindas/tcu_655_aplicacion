@@ -30,7 +30,7 @@ public class TomasItemFragment extends Fragment {
         Bundle args = getArguments();
 
         assert args != null;
-        String nombre = /*args.getString("nom") + " " +*/ args.getString("toma");
+        String nombre = /*args.getString("nom") + " " +*/ args.getString("muestreo");
 
         String descripcion = args.getString("desc");
         TextView t = view.findViewById(R.id.titulo);
