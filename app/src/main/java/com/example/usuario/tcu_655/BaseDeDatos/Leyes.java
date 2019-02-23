@@ -15,7 +15,7 @@ public class Leyes{
     public Leyes(String nombre, int fuente) {
         this.nombre = nombre;
         this.fuente = fuente;
-        articulos = new ArrayList<Articulo>();
+        articulos = new ArrayList<>();
     }
 
     public String getNombre() {

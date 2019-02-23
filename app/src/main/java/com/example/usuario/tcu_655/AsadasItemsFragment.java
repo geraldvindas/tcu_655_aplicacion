@@ -6,19 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class AsadasItemsFragment extends Fragment {
-    public static AsadasFragment me = null;
-    ListView mListView = null;
-    private Activity mParentActivity;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mParentActivity = getActivity();
+        Activity mParentActivity = getActivity();
     }
 
     @Override

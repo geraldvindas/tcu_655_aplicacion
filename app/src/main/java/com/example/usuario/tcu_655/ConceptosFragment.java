@@ -19,17 +19,14 @@ import com.example.usuario.tcu_655.BaseDeDatos.DataBaseAccess;
 
 public class ConceptosFragment extends Fragment {
 
-    public static ConceptosFragment me = null;
     private static ConceptosArrayAdapter conceptAdapter;
-    private ListView mListView = null;
     private static List<Conceptos> mConceptos;
-    private Activity mParentActivity;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mParentActivity = getActivity();
+        Activity mParentActivity = getActivity();
         DataBaseAccess databaseAccess = DataBaseAccess.getInstance(mParentActivity);
         databaseAccess.open();
         mConceptos = databaseAccess.getConceptos();
@@ -42,7 +39,7 @@ public class ConceptosFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.list_fragment, container, false);
-        mListView = view.findViewById(R.id.lista_datos);
+        ListView mListView = view.findViewById(R.id.lista_datos);
         mListView.setAdapter(conceptAdapter);
         mListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener()

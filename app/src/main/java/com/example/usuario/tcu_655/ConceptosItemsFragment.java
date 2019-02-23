@@ -7,22 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 
 
 
 public class ConceptosItemsFragment extends Fragment {
-    public static ConceptosFragment me = null;
-    ListView mListView = null;
-    private Activity mParentActivity;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mParentActivity = getActivity();
+        Activity mParentActivity = getActivity();
     }
 
     @Override

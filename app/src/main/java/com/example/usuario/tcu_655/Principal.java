@@ -19,10 +19,7 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.usuario.tcu_655.dummy.DummyContent;
-
-public class Principal extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, gloarioFragment.OnListFragmentInteractionListener {
+public class Principal extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     int ID; //fragment actual
     RelativeLayout mFragment;
@@ -37,14 +34,6 @@ public class Principal extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
         ID = R.id.nav_mapa;
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -175,11 +164,6 @@ public class Principal extends AppCompatActivity
                     .putBoolean("isFirstRun", false)
                     .apply();
         }
-    }
-
-    @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
-
     }
 
     public void fragmentManager(int id){
